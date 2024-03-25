@@ -17,7 +17,7 @@
 	<div><a href="/Menus/WriteForm">Add New Menu</a></div>
 	<div><a href="/Menus/WriteForm2">Add New Menu2</a></div>
 	<div><a href="/Menus/List">Menu List</a></div>	
-	<hr />
+	<div>&nbsp;</div>
 	<div><a href="/Users/List">User List</a></div>
 	<div><a href="/Users/WriteForm">Add New User</a></div>
   </main>	

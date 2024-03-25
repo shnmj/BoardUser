@@ -23,7 +23,7 @@
      font-weight: bold;
      /* SCSS 문법에 적용 */
      td {
-        border-color : white;
+        border-color : pink;
      }
   }
  
@@ -42,7 +42,7 @@
 	      <td>ID</td>
 	      <td>Name</td>
 	      <td>Email</td>
-	      <td>Member Rank</td>
+	      <td>Point</td>
 	      <td>InDate</td>	   
 	    </tr>
 	    <tr>
@@ -54,7 +54,11 @@
 	    <c:forEach  var="userVo" items="${ userList }" >
 	    <tr>
 	      <td>${userVo.userid}</td>
-	      <td>${userVo.username}</td>
+	      <td>
+	      	<a href="/Users/View?userid=${userVo.userid}">
+	      	${userVo.username}
+	      	</a>
+	      </td>
 	      <td>${userVo.email }</td>	      
 	      <td>${userVo.upoint}</td>	      
 	      <td>${userVo.indate}</td>      

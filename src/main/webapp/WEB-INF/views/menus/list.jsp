@@ -26,12 +26,6 @@
         border-color : white;
      }
   }
-  
-  /*
-  tr:first-child > td {
-     border-color : white;
-  }  
-  */
     
   tr:nth-child(2) > td {
      text-align : right;
@@ -58,7 +52,8 @@
 	      </td>
 	    </tr>
 	    
-	    <c:forEach  var="menuVo"  items="${ menuList }" >
+  <!-- jstl 문법                           EL 문법 -->         
+	    <c:forEach  var="menuVo"  items="${ menuList }" >  
 	    <tr>
 	      <td>${menuVo.menu_id}</td>
 	      <td>${menuVo.menu_name}</td>
@@ -67,10 +62,7 @@
 	      <td><a href="/Menus/Delete?menu_id=${menuVo.menu_id}">Delete</a></td>	      
 	    </tr>
 	    </c:forEach>
-	    
-	    
 	  </table>
-	
 	</main>
 </body>
 </html>
