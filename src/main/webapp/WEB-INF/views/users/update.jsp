@@ -35,36 +35,36 @@
 </head>
 <body>
   <main>
-	<h2>Member Reg</h2>
-	<form action="/Users/Write" method="POST">
+	<h2>회원 정보 수정</h2>
+	<form action="/Users/Update" method="POST">
 	<table>
 	 <tr>
 	   <td>ID</td>
-	   <td><input type="text" name="userid" /></td>
+	   <td><input type="text" name="userid"     value="${vo.userid}" /></td>
 	 </tr>
 	 <tr>
 	   <td>PW</td>
-	   <td><input type="password" name="passwd" /></td>
+	   <td><input type="password" name="passwd" value="${vo.passwd}" /></td>
 	 </tr>
 	 <tr>
 	   <td>Name</td>
-	   <td><input type="text" name="username" /></td>
+	   <td><input type="text" name="username"   value="${vo.username}" /></td>
 	 </tr>
 	 <tr>
 	   <td>Email</td>
-	   <td><input type="text" name="email" /></td>
+	   <td><input type="text" name="email"      value="${vo.email}"/></td>
 	 </tr>
 	 <tr>
 	   <td>Point</td>
-	   <td><input type="text" value="1000" readonly /></td>
+	   <td><input type="text" name="upoint"     value="${vo.upoint}" /></td>
 	 </tr>
 	 <tr>
 	   <td>InDate</td>
-	   <td><input type="text"  value="${ now }" readonly /></td>
+	   <td><input type="text" value="${ now }" readonly /></td>
 	 </tr>
 	 <tr>
 	   <td colspan="2">
-	    <input type="submit" value="Add" />
+	    <input type="submit" value="Update" />
 	    <input type="button" value="List" id="goList" />
 	   </td>
 	 </tr>
@@ -77,7 +77,7 @@
   <script>
   	const  goListEl  = document.getElementById('goList');
   	goListEl.addEventListener('click', function(e) {
-  		location.href = '/Menus/List';
+  		location.href = "/Users/List";
   	})
   
   </script>

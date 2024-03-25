@@ -22,7 +22,7 @@
    }
    
    td:not([colspan]):first-child {
-      background: black;
+      background: grey;
       color : white;
       font-weight: bold;
    }

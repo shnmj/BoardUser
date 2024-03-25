@@ -35,7 +35,7 @@
 </head>
 <body>
   <main>
-	<h2>Member Reg</h2>
+	<h2>회원 가입</h2>
 	<form action="/Users/Write" method="POST">
 	<table>
 	 <tr>

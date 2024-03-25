@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,11 +40,11 @@
 </head>
 <body>
   <main>
-	<h2>Member Info</h2>
+	<h2>회원 정보</h2>
 	<table>
 	 <tr>
 	   <td>ID</td>
-	   <td>${vo.userid}</td>
+	   <td>${vo['userid'] }</td>
 	 </tr>
 	 <tr>
 	   <td>PW</td>
@@ -62,9 +63,20 @@
 	   <td>${vo.upt}</td>
 	 </tr>
 	 <tr>
-	 <tr>
 	   <td>Point</td>
-	   <td>${vo.upoint}</td>
+	   <td>${vo['upoint'] }
+	   	<%-- <c:if  test="${vo.upoint ne 0}">
+	   		${vo['upoint'] } --%>
+	   		<c:choose>
+	   			<c:when test="%{vo.upoint ne 0}">
+	   			 ${ vo['upoint'] }
+	   			</c:when>
+	   			<c:otherwise>
+	   				<span style="color:red">없음</span>
+	   			</c:otherwise>
+	   	</c:choose>
+	   	</td>
+	   <%-- <td>${vo['upoint']} + 1000</td> --%>
 	 </tr>
 	 <tr>
 	   <td>InDate</td>
@@ -73,16 +85,16 @@
 	 <tr>
 	   <td colspan="2">
 	   <a class="btn btn-primary btn-sm" role="button"
-	   href="/Users/WriteForm" >Sign up</a>
+	   href="/Users/WriteForm" >회원가입</a>
 	   
 	   <a class="btn btn-primary btn-sm" role="button"
-	   href="/Users/UpdateForm?userid="${vo.userid}>Update</a>
+	   href="/Users/UpdateForm?userid="${vo.userid}>회원수정</a>
 	   
 	   <a class="btn btn-primary btn-sm" role="button"
-	   href="/Users/Delete?userid=${vo.userid}">Delete</a>
+	   href="/Users/Delete?userid=${vo.userid}">회원삭제</a>
 	   
 	   <a class="btn btn-primary btn-sm" role="button"
-	   href="/Users/List">Member List</a>
+	   href="/Users/List">회원목록</a>
 	   
 	   <a class="btn btn-primary btn-sm" role="button"
 	   href="/">Home</a>
