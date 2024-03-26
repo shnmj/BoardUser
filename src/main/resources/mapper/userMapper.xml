@@ -51,25 +51,29 @@
 	         USERID,
 	         PASSWD,
 	         USERNAME,
-	         EMAIL
+	         EMAIL,
+	         UPOINT,
+	         INDATE
 	    )
 	    VALUES (
 	         #{userid},
 	         #{passwd},
 	         #{username},
-	         #{email}
+	         #{email},
+	         1000,
+	         SYSDATE
 	    )	
 		
 	</insert>
 	
 	<update id="updateUser">
-		UPDATE  TUSER (
+		UPDATE  TUSER
 		 SET    USERNAME = #{username}, 
 		        PASSWD   = #{passwd}, 
 		        EMAIL    = #{email},
 		        UPOINT   = #{upoint}
 		 WEHRE  USERID   = #{userid}
-		)
+		
 		
 	</update>
 	

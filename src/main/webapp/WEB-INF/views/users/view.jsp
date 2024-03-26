@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,11 +64,11 @@
 	 </tr>
 	 <tr>
 	   <td>Point</td>
-	   <td>${vo['upoint'] }
+	   <td>
 	   	<%-- <c:if  test="${vo.upoint ne 0}">
 	   		${vo['upoint'] } --%>
 	   		<c:choose>
-	   			<c:when test="%{vo.upoint ne 0}">
+	   			<c:when test="${vo.upoint ne 0}">
 	   			 ${ vo['upoint'] }
 	   			</c:when>
 	   			<c:otherwise>

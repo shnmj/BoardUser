@@ -40,7 +40,7 @@
 	<table>
 	 <tr>
 	   <td>ID</td>
-	   <td><input type="text" name="userid"     value="${vo.userid}" /></td>
+	   <td><input type="text" name="userid" value="${vo.userid}" readonly /></td>
 	 </tr>
 	 <tr>
 	   <td>PW</td>
@@ -48,15 +48,15 @@
 	 </tr>
 	 <tr>
 	   <td>Name</td>
-	   <td><input type="text" name="username"   value="${vo.username}" /></td>
+	   <td><input type="text" name="username" value="${vo.username}" /></td>
 	 </tr>
 	 <tr>
 	   <td>Email</td>
-	   <td><input type="text" name="email"      value="${vo.email}"/></td>
+	   <td><input type="text" name="email" value="${vo.email}"/></td>
 	 </tr>
 	 <tr>
 	   <td>Point</td>
-	   <td><input type="text" name="upoint"     value="${vo.upoint}" /></td>
+	   <td><input type="text" name="upoint" value="${vo.upoint}" /></td>
 	 </tr>
 	 <tr>
 	   <td>InDate</td>

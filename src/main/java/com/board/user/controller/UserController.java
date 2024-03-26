@@ -1,9 +1,11 @@
 package com.board.user.controller;
-
+/*
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+*/
 import java.util.HashMap;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import com.board.user.domain.UserVo;
 import com.board.user.mapper.UserMapper;
 
 import lombok.extern.slf4j.Slf4j;
+
 
 @Slf4j
 @Controller
@@ -42,12 +45,16 @@ public class UserController {
 	public  ModelAndView   writeForm() {
 		
 		ModelAndView    mv    = new ModelAndView();
+		
+		/*
 		LocalDateTime   today = LocalDateTime.now();
 		String          now   = today.format(
 				DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SSSS")); 
 		DayOfWeek       wkday = today.getDayOfWeek();	
 		now                  += " " + wkday; 
 		mv.addObject("now", now);
+		*/
+		
 		mv.setViewName("users/write");
 		return  mv;
 		
@@ -56,7 +63,6 @@ public class UserController {
 	//  /Users/Write
 	@RequestMapping("/Write")
 	public  ModelAndView  write( UserVo  userVo ) {
-		System.out.println();
 		// Commit
 		userMapper.insertUser( userVo );		
 		
@@ -74,9 +80,9 @@ public class UserController {
 		// userid=U0005  -> db 조회
 		HashMap<String, Object>  map  =  userMapper.getUser(userVo);
 		// System.out.println(vo);
-		log.info("vo : {}", map); 
+		log.info("map : {}", map); 
 		
-		// vo.get("userid")
+		// map.get("userid")
 		
 		ModelAndView mv  =  new ModelAndView();
 		mv.addObject("vo", map);
@@ -130,20 +136,6 @@ public class UserController {
 		return mv;
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }
